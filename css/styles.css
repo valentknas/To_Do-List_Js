@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 20px;
+  text-align: center; /* centra todo */
+}
+
+h2 {
+  color: #007BFF; /* azul */
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid #aaa;
+}
+
+button {
+  padding: 5px 10px;
+  background: #007BFF; /* azul */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3; /* azul más oscuro */
+}
+
+.item-to-do {
+  margin: 5px auto; /* centrado */
+  max-width: 300px; /* ancho limitado para que no se estire */
+}
+
+#cont-to-do-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  background: white;
+  border: 1px solid #ddd;
+  justify-content: center;
+}
+
+#cont-to-do-list p {
+  margin: 0;
+}
+
+input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+  color: gray;
+}
