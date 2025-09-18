@@ -104,3 +104,19 @@ btnStyles.addEventListener('click',()=>{
 
 })
 
+// Detectar la tecla Enter en el input
+input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        const textoItem = input.value.trim();
+        if (textoItem === "") {
+            alert('No se puede crear una tarea vacía');
+        } else {
+            const newItem = createToDoItem(textoItem);
+            ToDoList.appendChild(newItem);
+            eventsToItem(newItem);
+            input.value = "";
+        }
+    }
+});
+
+
