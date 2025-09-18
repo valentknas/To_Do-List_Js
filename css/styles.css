@@ -1,56 +1,94 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  margin: 20px;
-  text-align: center; /* centra todo */
-  border-radius: 80px;
-}
-
-h2 {
-  color: #007BFF; /* azul */
-}
-
-form {
-  margin-bottom: 15px;
-}
-
-input[type="text"] {
-  padding: 5px;
-  border: 1px solid #aaa;
-}
-
-button {
-  padding: 5px 10px;
-  background: #007BFF; /* azul */
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0056b3; /* azul más oscuro */
-}
-
-.item-to-do {
-  margin: 5px auto; /* centrado */
-  max-width: 300px; /* ancho limitado para que no se estire */
-}
-
-#cont-to-do-list {
+  background: #0c8bd4; /* gris claro */
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px;
-  background: white;
-  border: 1px solid #ddd;
   justify-content: center;
-}
-
-#cont-to-do-list p {
+  align-items: center;
+  height: 100vh;
   margin: 0;
 }
 
-input[type="checkbox"]:checked + p {
+#global-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+h2 {
+  color: #007BFF;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+#to-do-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+#add-btn {
+  padding: 5px 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background: #0056b3;
+}
+
+.item-to-do {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 6px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.item-to-do p {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.item-to-do input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.item-to-do button {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.item-to-do button:hover {
+  color: #cc0000;
+}
+
+#cont-complete-list .item-to-do p {
   text-decoration: line-through;
   color: gray;
 }

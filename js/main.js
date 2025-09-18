@@ -34,7 +34,7 @@ function createToDoItem (textoItem) {
     item.appendChild(deleteBtn);
     // utilizamos el return para retornar o para dar respuesta al elemento creado ya que lo utilizaremos
     return item;
-
+// esta funcion solo crea la estructura del html y la deja en el limbo
 
 };
 
@@ -50,6 +50,36 @@ addBtn.addEventListener('click',()=>{
     else{
         const newItem = createToDoItem (textoItem);
         ToDoList.appendChild(newItem);
+        eventsToItem(newItem);
         input.value ="";
     }
 });
+
+// La siguiente funcion nos permitira agregar el funcionamiento principal sobre las tareas es decir marcar la tarea como completada o en dado caso eliminarla 
+
+function eventsToItem (item) {
+    const checkbox = item.querySelector('input');
+    const deleteBtn = item.querySelector('button');
+    // utilizamos querySelector para capturar el input y el button que estan dentro del item
+
+
+    // completar la tarea
+
+    checkbox.addEventListener('change',()=>{
+        if (checkbox.checked) {
+            completeList.appendChild(item);
+            
+        }
+        else{
+            ToDoList.appendChild(item);
+        }
+    });
+
+    deleteBtn.addEventListener('click',()=>{
+        item.remove();
+
+
+    });
+
+
+}
