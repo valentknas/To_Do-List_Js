@@ -83,3 +83,24 @@ function eventsToItem (item) {
 
 
 }
+
+
+const btnStyles = document.getElementById('change-styles');
+btnStyles.addEventListener('click',()=>{
+    const linkCss = document.getElementById('enlace-estilos');
+    if (linkCss.getAttribute('href')=='css/styles.css') {
+      linkCss.setAttribute('href','css/styles-noche.css');
+      btnStyles.textContent = 'Modo noche';
+    }
+
+    else{
+      linkCss.setAttribute('href','css/styles.css');
+      btnStyles.textContent = 'Modo dia';
+
+    }
+
+
+
+
+})
+
